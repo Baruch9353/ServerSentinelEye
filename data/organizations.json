@@ -1,0 +1,101 @@
+[
+  {
+    "id": "0",
+    "name": "Hamas",
+    "threatLevel": "5",
+    "terroristCount": "58",
+    "activityYears": "2017 - Present"
+  },
+  {
+    "id": "1",
+    "name": "PIJ",
+    "threatLevel": "5",
+    "terroristCount": "32",
+    "activityYears": "2017 - Present"
+  },
+  {
+    "id": "2",
+    "name": "Fatah",
+    "threatLevel": "4",
+    "terroristCount": "28",
+    "activityYears": "1994 - Present"
+  },
+  {
+    "id": "3",
+    "name": "Al-Shabaab",
+    "threatLevel": "5",
+    "terroristCount": "420",
+    "activityYears": "2006 - Present"
+  },
+  {
+    "id": "4",
+    "name": "JeM",
+    "threatLevel": "5",
+    "terroristCount": "250",
+    "activityYears": "2000 - Present"
+  },
+  {
+    "id": "5",
+    "name": "LeT",
+    "threatLevel": "5",
+    "terroristCount": "300",
+    "activityYears": "1990 - Present"
+  },
+  {
+    "id": "6",
+    "name": "D-Company",
+    "threatLevel": "5",
+    "terroristCount": "200",
+    "activityYears": "1980 - Present"
+  },
+  {
+    "id": "7",
+    "name": "IM",
+    "threatLevel": "4",
+    "terroristCount": "150",
+    "activityYears": "2007 - Present"
+  },
+  {
+    "id": "8",
+    "name": "AQIM",
+    "threatLevel": "5",
+    "terroristCount": "350",
+    "activityYears": "2000 - Present"
+  },
+  {
+    "id": "9",
+    "name": "Hezbollah",
+    "threatLevel": "5",
+    "terroristCount": "10000",
+    "activityYears": "1982 - Present"
+  },
+  {
+    "id": "10",
+    "name": "AQAP",
+    "threatLevel": "5",
+    "terroristCount": "500",
+    "activityYears": "2009 - Present"
+  },
+  {
+    "id": "11",
+    "name": "KTF",
+    "threatLevel": "4",
+    "terroristCount": "200",
+    "activityYears": "1990 - Present"
+  },
+  {
+    "id": "12",
+    "name": "Ansaru",
+    "threatLevel": "4",
+    "terroristCount": "150",
+    "activityYears": "2012 - Present"
+  },
+  {
+    "id": "13",
+    "name": "Unknown",
+    "threatLevel": "3",
+    "terroristCount": "0",
+    "activityYears": "Unknown"
+  }
+]
+
