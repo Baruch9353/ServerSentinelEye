@@ -6,9 +6,21 @@ import {
     deleteOrganization
 } from '../DAL/organizationsDal.js';
 
-export async function getAllOrganizationsHandler(req, res) {
-    const organizations = await getAllOrganizations();
-    res.json(organizations);
+export async function getOrganizationsHandler(req, res) {
+    const { searchName = "" } = req.query;
+
+    try {
+        let data = await getAllOrganizations();
+
+        let organizations = data.filter(item =>
+            item.name.toLowerCase().includes(searchName.toLowerCase())
+        );
+        organizations = organizations.sort((a, b) => a["name"] > b["name"] ? 1 : -1);
+
+        res.json(organizations);
+    } catch (err) {
+        res.status(500).json({ error: err.message });
+    }
 }
 
 export async function getOrganizationByIdHandler(req, res) {

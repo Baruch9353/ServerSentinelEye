@@ -1,8 +1,20 @@
 import { getAllTerrorists, getTerroristById, addTerrorist, updateTerrorist, deleteTerrorist } from '../DAL/terroristsDal.js';
 
-export async function getAllTerroristsHandler(req, res) {
-  const terrorists = await getAllTerrorists();
-  res.json(terrorists);
+export async function getTerroristsHandler(req, res) {
+  const { searchName = "" } = req.query;
+
+  try {
+    let data = await getAllTerrorists();
+
+    let terrorists = data.filter(item =>
+      item.name.toLowerCase().includes(searchName.toLowerCase())
+    );
+    terrorists = terrorists.sort((a, b) => a["name"] > b["name"] ? 1 : -1);
+
+    res.json(terrorists);
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
 }
 
 export async function getTerroristByIdHandler(req, res) {
