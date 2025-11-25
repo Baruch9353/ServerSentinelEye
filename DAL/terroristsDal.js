@@ -15,9 +15,10 @@ export async function getTerroristById(id) {
 export async function addTerrorist(terrorist) {
   const terrorists = await getAllTerrorists();
   let id = terrorists.length > 0 ? Number(terrorists[terrorists.length - 1].id) + 1 + '' : 1;
-  terrorists.push({ id, ...terrorist });
+  const newTerrorist = { id, ...terrorist }
+  terrorists.push(newTerrorist);
   await writeFile(dataFilePath, JSON.stringify(terrorists, null, 2));
-  return terrorist;
+  return newTerrorist;
 }
 
 export async function updateTerrorist(id, updatedData) {

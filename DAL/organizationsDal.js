@@ -12,10 +12,11 @@ export async function getOrganizationById(id) {
     return organizations.find(org => org.id === id);
 }
 
-export async function addOrganization(newOrganization) {
+export async function addOrganization(organization) {
     const organizations = await getAllOrganizations();
     let id = organizations.length > 0 ? Number(organizations[organizations.length - 1].id) + 1 + '' : 1;
-    organizations.push({ id, ...newOrganization });
+    const newOrganization = { id, ...organization }
+    organizations.push(newOrganization);
     await writeFile(dataFilePath, JSON.stringify(organizations, null, 2));
     return newOrganization;
 }
